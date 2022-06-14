@@ -10,6 +10,7 @@ const forecast = require('./utils/forecast')
 
 //the express app
 const app = express()
+const port = process.env.PORT || 3000
 // Define paths for express config
 const publicDirectoryPath = path.join(__dirname, '../public')
 const viewsPath = path.join(__dirname, '../templates/views') //this is a path for folder hbs uses, if were not using the default directory 'views'
@@ -147,7 +148,7 @@ app.get('*', (req, res) => {
     })
 })
 //starts up the server & has it listen on a specific port
-app.listen(3000, () => {
+app.listen(port, () => {
     //this function runs when the server is up and running
-    console.log('Server is up on port 3000')
+    console.log('Server is up on port ' + port)
 })
