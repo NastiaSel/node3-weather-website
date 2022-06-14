@@ -33,7 +33,7 @@ weatherForm.addEventListener('submit', (e) => {
             }
             else {
                 message1.textContent = data.location
-                message2.textContent = data.forecast.temperature + ' Degrees'
+                message2.textContent = data.forecast.temperature + ' Degrees, Wind Speed:' + data.forecast.wind_speed + 'KMpH'
                 console.log(data.location)
                 console.log(data.forecast.temperature + ' Degrees')
             }

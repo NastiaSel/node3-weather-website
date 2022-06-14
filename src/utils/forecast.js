@@ -16,7 +16,10 @@ const forecast = (lat, long, callback) => {
         else {
             callback(undefined, {
                 temperature: body.current.temperature,
+                wind_speed: body.current.wind_speed
             })
+            console.log(body.current.wind_speed)
+
         }
     })
 }
